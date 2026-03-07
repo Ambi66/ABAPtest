@@ -95,7 +95,7 @@ FORM display_menu.
         ls_cat      TYPE yma_rest_cat.
 
   SELECT * FROM yma_rest_menu
-    INTO TABLE gt_menu
+    INTO TABLE @gt_menu
     WHERE available = @abap_true
     ORDER BY catid ASCENDING, item_id ASCENDING.
 
