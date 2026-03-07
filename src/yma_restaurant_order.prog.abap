@@ -13,9 +13,9 @@ REPORT yma_restaurant_order.
 * Global data
 *----------------------------------------------------------------------*
 DATA:
-  lv_title1(30)   TYPE c,
-  lv_title2(30)   TYPE c,
-  lv_title3(30)   TYPE c,
+  lv_tit1(30)   TYPE c,
+  lv_tit2(30)   TYPE c,
+  lv_tit3(30)   TYPE c,
   gs_cust         TYPE yma_rest_cust,
   gs_ord          TYPE yma_rest_ord,
   gs_ordi         TYPE yma_rest_ordi,
@@ -31,17 +31,17 @@ DATA:
 *----------------------------------------------------------------------*
 * Selection Screen
 *----------------------------------------------------------------------*
-SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE lv_title1.
+SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE lv_tit1.
   PARAMETERS: p_show AS CHECKBOX DEFAULT space.
 SELECTION-SCREEN END OF BLOCK b1.
 
-SELECTION-SCREEN BEGIN OF BLOCK b2 WITH FRAME TITLE lv_title2.
+SELECTION-SCREEN BEGIN OF BLOCK b2 WITH FRAME TITLE lv_tit2.
   PARAMETERS: p_table TYPE yma_rest_ord-table_no.
   PARAMETERS: p_cname TYPE yma_rest_cust-cust_name.
   PARAMETERS: p_phone TYPE yma_rest_cust-phone.
 SELECTION-SCREEN END OF BLOCK b2.
 
-SELECTION-SCREEN BEGIN OF BLOCK b3 WITH FRAME TITLE lv_title3.
+SELECTION-SCREEN BEGIN OF BLOCK b3 WITH FRAME TITLE lv_tit3.
   PARAMETERS: p_itm1  TYPE yma_rest_menu-item_id,
               p_qty1  TYPE yma_rest_ordi-quantity DEFAULT '001'.
   PARAMETERS: p_itm2  TYPE yma_rest_menu-item_id,
@@ -58,9 +58,9 @@ SELECTION-SCREEN END OF BLOCK b3.
 * INITIALIZATION  –  set block titles
 *----------------------------------------------------------------------*
 INITIALIZATION.
-  lv_title1 = 'Display Options'.
-  lv_title2 = 'Table and Customer'.
-  lv_title3 = 'Order Items (Item ID + Quantity)'.
+  lv_tit1 = 'Display Options'.
+  lv_tit2 = 'Table and Customer'.
+  lv_tit3 = 'Order Items (Item ID + Quantity)'.
 
 *----------------------------------------------------------------------*
 * AT SELECTION-SCREEN  –  validate input for order mode
