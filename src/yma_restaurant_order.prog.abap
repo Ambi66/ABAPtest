@@ -13,9 +13,6 @@ REPORT yma_restaurant_order.
 * Global data
 *----------------------------------------------------------------------*
 DATA:
-  lv_tit1(30)   TYPE c,
-  lv_tit2(30)   TYPE c,
-  lv_tit3(30)   TYPE c,
   gs_cust         TYPE yma_rest_cust,
   gs_ord          TYPE yma_rest_ord,
   gs_ordi         TYPE yma_rest_ordi,
