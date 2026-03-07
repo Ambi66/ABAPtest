@@ -3,19 +3,14 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>YMA_MARA_COUNT</NAME>
+    <NAME>YMA_RESTAURANT_ORDER</NAME>
+    <DBAPL>S</DBAPL>
     <SUBC>1</SUBC>
-    <RLOAD>E</RLOAD>
+    <APPL>X</APPL>
     <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
-   <TPOOL>
-    <item>
-     <ID>R</ID>
-     <ENTRY>Material Count</ENTRY>
-     <LENGTH>14</LENGTH>
-    </item>
-   </TPOOL>
   </asx:values>
  </asx:abap>
 </abapGit>
