@@ -96,7 +96,7 @@ FORM display_menu.
 
   SELECT * FROM yma_rest_menu
     INTO TABLE gt_menu
-    WHERE available = abap_true
+    WHERE available = @abap_true
     ORDER BY catid ASCENDING, item_id ASCENDING.
 
   IF sy-subrc <> 0.
@@ -166,11 +166,10 @@ FORM validate_and_add_item
   SELECT SINGLE * FROM yma_rest_menu INTO gs_menu
     WHERE item_id = pv_item_id.
   IF sy-subrc <> 0.
-    MESSAGE |Menu item &1 does not exist.| TYPE 'E' WITH pv_item_id.
+    MESSAGE |Menu item { pv_item_id } does not exist.| TYPE 'E'.
   ENDIF.
   IF gs_menu-available <> abap_true.
-    MESSAGE |Item &1 (&2) is currently not available.| TYPE 'E'
-      WITH pv_item_id gs_menu-item_name.
+    MESSAGE |Item { pv_item_id } ({ gs_menu-item_name }) is currently not available.| TYPE 'E'.
   ENDIF.
 
   lv_pos             = lv_pos + 1.
@@ -238,7 +237,7 @@ FORM create_order.
     MODIFY gt_ordi FROM gs_ordi.
     INSERT yma_rest_ordi FROM gs_ordi.
     IF sy-subrc <> 0.
-      MESSAGE |Error saving order item &1.| TYPE 'E' WITH gs_ordi-item_pos.
+      MESSAGE |Error saving order item { gs_ordi-item_pos }.| TYPE 'E'.
     ENDIF.
   ENDLOOP.
 ENDFORM.
