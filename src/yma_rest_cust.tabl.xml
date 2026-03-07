@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
@@ -10,7 +10,6 @@
     <DDTEXT>Restaurant: Customers</DDTEXT>
     <MAINFLAG>X</MAINFLAG>
     <CONTFLAG>A</CONTFLAG>
-    <ENHA_CATEG>BADI_COMPAT</ENHA_CATEG>
    </DD02V>
    <DD09L>
     <TABNAME>YMA_REST_CUST</TABNAME>
@@ -31,36 +30,44 @@
     <DD03P>
      <FIELDNAME>CUST_ID</FIELDNAME>
      <KEYFLAG>X</KEYFLAG>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>N</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <NOTNULL>X</NOTNULL>
      <DATATYPE>NUMC</DATATYPE>
      <LENG>000008</LENG>
-     <ADMINFIELD>0</ADMINFIELD>
-     <NOTNULL>X</NOTNULL>
+     <MASK>  NUMC</MASK>
      <DDTEXT>Customer ID</DDTEXT>
-     <COMPTYPE/>
     </DD03P>
     <DD03P>
      <FIELDNAME>CUST_NAME</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000100</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000050</LENG>
-     <ADMINFIELD>0</ADMINFIELD>
+     <MASK>  CHAR</MASK>
      <DDTEXT>Customer Name</DDTEXT>
-     <COMPTYPE/>
     </DD03P>
     <DD03P>
      <FIELDNAME>PHONE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000020</LENG>
-     <ADMINFIELD>0</ADMINFIELD>
+     <MASK>  CHAR</MASK>
      <DDTEXT>Phone Number</DDTEXT>
-     <COMPTYPE/>
     </DD03P>
     <DD03P>
      <FIELDNAME>EMAIL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000120</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000060</LENG>
-     <ADMINFIELD>0</ADMINFIELD>
+     <MASK>  CHAR</MASK>
      <DDTEXT>E-Mail Address</DDTEXT>
-     <COMPTYPE/>
     </DD03P>
    </DD03P_TABLE>
   </asx:values>
